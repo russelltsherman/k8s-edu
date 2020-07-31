@@ -1,0 +1,11 @@
+###############################################################################
+# git repo manifest
+# 
+# one repo per line
+# 
+# {remote_repo_url} {local_repo}
+###############################################################################
+git@github.com:burrsutter/9stepsawesome.git 9stepsawesome
+git@gitlab.com:nanuchi/java-app java-app
+git@gitlab.com:nanuchi/node-app node-app
+git@github.com:russelltsherman/k8s-voting-app voting-app
