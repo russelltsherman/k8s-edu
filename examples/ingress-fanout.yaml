@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: fanout-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: myapp.com
+      http:
+        paths:
+          - path: /analytics
+            backend:
+              serviceName: anaoytics-service
+              servicePort: 3000
+          - path: /shopping
+            backend:
+              serviceName: shipping-service
+              servicePort: 8080

@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: subdomain-ingress
+spec:
+  rules:
+    - host: anaoytics.myapp.com
+      http:
+        paths:
+          - paths:
+            backend:
+              serviceName: anaoytics-service
+              servicePort: 3000
+    - host: shopping.myapp.com
+      http:
+        paths:
+          - paths:
+            backend:
+              serviceName: shopping-service
+              servicePort: 8080
